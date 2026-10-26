@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>EddieSucks - Arcade Game</title>
+    <title>EddieSucks - Arcade</title>
     <link rel="stylesheet" href="styles/game.css">
 </head>
 <body>
     <div id="game-container">
         <canvas id="gameCanvas"></canvas>
         <div id="ui-layer">
-            <div id="menu">
+            <div id="menu" class="ui-panel">
                 <h1>EddieSucks</h1>
+                <div class="customizer">
+                    <p>Choose Player Color:</p>
+                    <input type="color" id="playerColor" value="#00d2d3">
+                </div>
                 <button id="startBtn">START GAME</button>
+            </div>
+            <div id="death-screen" class="ui-panel" style="display: none;">
+                <h1>GAME OVER</h1>
+                <p>Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn">RESTART</button>
+                <button id="homeBtn">HOME</button>
             </div>
             <div id="hud" style="display: none;">Score: <span id="score">0</span></div>
         </div>
